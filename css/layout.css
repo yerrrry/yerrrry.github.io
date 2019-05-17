@@ -1,0 +1,43 @@
+/* 셀렉터 연습 */
+/* 
+가상클래스
+:hover,
+:visited
+:focus
+:active
+
+[] - 태그의 속성 선택할 때 사용
+ex)
+img[alt="로고"]{}
+img[title]{}
+img[src*="a.jpg"]{}
+img[src^="a.jpg"]{}
+img[src*="a.jpg"]{}
+a[target]{}
+input[type-"button"]{}
+
+:firdt-child - 첫 번째 요소 선택
+:first-of-type
+:last-child - 마지막 번째 요소 선택
+:last-of-type
+
+*/
+div, p{
+	border: 1px solid #222;
+	padding: 50px;
+}
+div:first-child{
+	background-color: blue;
+}
+p:first-of-type{
+	background-color: green;
+}
+div:last-child{
+	background-color: yellow;
+}
+div:last-of-type{
+	background-color: red;
+}
+
+/* 
+ */
