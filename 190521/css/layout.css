@@ -1,0 +1,254 @@
+.tabgroup{
+	position: relative;
+	width: 500px;
+	height: 250px;
+	margin: 0 auto;
+}
+/* type1 - h2 + ul구조 */
+.tabmenu{
+
+}
+.tabmenu h2{
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-right: -1px;
+}
+.tabmenu h2 a{
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	padding: 12px 10px;
+	border: 1px solid #dadada;
+	background-color: #f4f4f4;
+	text-align: center;
+}
+.tabmenu ul{
+	display: none;
+	position: absolute;
+	top: 39px;
+	left: 0;
+	width: 100%;
+	padding: 15px 10px;
+	border-top: 1px solid #dadada;
+}
+.tabmenu li{
+	position: relative;
+	padding-left: 10px;
+	border-bottom: 1px dotted #dadada;
+	/* background: url() no-repeat 0 50%; */
+}
+.tabmenu li::before{
+	content: "";
+	display: inline-block;
+	position:absolute;
+	top: 50%;
+	left: 0;
+	width: 4px;
+	height: 4px;
+	background-color: #dadada;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+.tabmenu li a{
+	overflow: hidden;
+	display: inline-block;
+	max-width: calc(100% - 100px);
+	padding: 8px 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* 
+positionabsolute;
+top: 50%;
+left: 50%;
+min-width:500px;
+transform: translate(-50%, -50%);
+ */
+.tabmenu li .date{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(-50%);
+	-webkit-transform: translate(-50%);
+	-moz-transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	-o-transform: translate(-50%);
+}
+.tabmenu .more{
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	display: inline-block;
+
+}
+
+/* 활성화메뉴 - on */
+.tabmenu.on h2{
+	z-index: 1;
+}
+.tabmenu.on h2 a{
+	border-color: #222;
+	border-bottom-color: transparent;
+	background-color: #fff;
+	font-weight: bold;
+}
+.tabmenu.on ul{
+	display: block;
+}
+
+/* 한 줄 말줄임 처리
+overflow:hidden;
+displat: inline-block;
+max-width:100%;
+text-overflow"ellipsis; //...말줄임 역할 
+white-space:nowrap; //텍스트를 한 줄로 처리 역할 */
+
+
+.tab{
+
+}
+.tab .tabtit{
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-right: -1px;
+}
+.tab .tabtit a{
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #dadada;
+	background-color: #f4f4f4;
+	text-align: center;
+
+}
+.tab .tabcnt{
+	display: none;
+	position: absolute;
+	top: 39px;
+	left: 0;
+	width: 100%;
+}
+.tab .tabcnt ul{
+	
+	width: 100%;
+	padding: 15px 10px;
+	border-top: 1px solid #dadada;
+
+}
+.tab .tabcnt li{
+	position: relative;
+	padding-left: 10px;
+	border-bottom: 1px dotted #dadada;
+	/* background: url() no-repeat 0 50%; */
+
+}
+.tab .tabcnt li a{
+	overflow: hidden;
+	display: inline-block;
+	max-width: calc(100% - 100px);
+	padding: 8px 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+}
+.tab .tabcnt li .date{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(-50%);
+	-webkit-transform: translate(-50%);
+	-moz-transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	-o-transform: translate(-50%);
+
+}
+.tab .tabcnt .more{
+	position: absolute;
+	top: -20px;
+	right: 5px;
+	display: inline-block;
+
+}
+
+/* 활성화메뉴 - on */
+.tab .tabtit.on{
+	z-index: 1;
+}
+.tab .tabtit.on a{
+	border-color: #222;
+	border-bottom-color: transparent;
+	background-color: #fff;
+	font-weight: bold;
+}
+.tab .tabcnt.on{
+	display: block;
+}
+
+
+/* 서브 콘텐츠 탭메뉴 구조 */
+.cbody{
+	width: 700px;
+	margin: 0 auto;
+
+}
+.tapmenu{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #222;
+}
+.tapmenu::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.tapmenu li{
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-right: -1px;
+}
+.tapmenu li a{
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #dadada;
+	border-bottom-color: #222;
+	background-color: #f4f4f4;
+	text-align: center;
+}
+.tapcnt{
+	display: none;
+	position: relative;
+	min-height: 500px;
+	padding: 15px 10px;
+	border: 1px solid #222;
+	border-top: 0;
+}
+/* 활성화 메뉴 - on */
+.tapmenu li.on{
+	z-index: 1;
+}
+.tapmenu li.on a{
+	border-color: #222;
+	border-bottom-color: transparent;
+	background-color: #fff;
+	font-weight: bold;
+
+}
+.tapcnt.on{
+	display: block;
+}
+
+
