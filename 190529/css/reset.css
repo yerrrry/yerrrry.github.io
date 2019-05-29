@@ -99,6 +99,15 @@ input[type="checkbox"]:focus,
 input[type="radio"]:focus{
     border-color:transparent;
 }
+input[disabled]{
+    background-color:#f8f8f8;
+}
+input[read-only]{
+    background-color:#f8f8f8;
+}
+i,em,address{
+    font-style: normal;
+}
 
 /* table */
 table{
@@ -110,4 +119,10 @@ table{
 th,td{
     padding:5px;
     border:1px solid #222;
+}
+
+/* Font Icon */
+.fa::before{
+    color: inherit;
+    font-size: inherit;
 }
