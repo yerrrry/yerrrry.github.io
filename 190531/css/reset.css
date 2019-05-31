@@ -67,6 +67,14 @@ caption,
 legend{
     display:none;
 }
+.tts{
+    overflow: hidden;
+    position: absolute;
+    top: -999em;
+    width: 1px;
+    height: 1px;
+    color: transparent;
+}
 
 /* float 해제 */
 .clear{
